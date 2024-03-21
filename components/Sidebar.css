@@ -42,8 +42,9 @@
     font-weight: 600;
     color: rgb(89, 10, 0);
     background: #f7fafc;
-    width: 13rem;
+    width: 10rem;
     text-align: center;
+    padding-left: 0.5rem;
 }
 
 @media (min-width: 768px) {

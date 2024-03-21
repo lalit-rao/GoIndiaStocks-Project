@@ -149,7 +149,7 @@ const Sidebar = () => {
             <div
                 className={`${
                     open ? "w-72" : "w-0 "
-                } bg-blue-900 h-auto pt-8 relative duration-300`}
+                } bg-blue-900 min-h-full pt-8 md:relative duration-300 absolute z-50`}
             >
                 <div
                     className="absolute cursor-pointer -right-4 top-[40%] w-6 h-24 bg-blue-900  justify-center flex items-center"
@@ -207,687 +207,367 @@ const Sidebar = () => {
                     ))}
                 </ul>
             </div>
-            {/*<div className="h-full flex-1">
-                <div className="flex">
-                    <div className="h-full w-[70%] pr-8 pt-6 pl-8">
-                        <h1 className={action==="Discussion Forum" ? "submit gray": "submit"} onClick={() => {setAction("Market Stories")}}>Discussion Forum</h1>
-                        <div className="pt-4">
-                            <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
-                                <div>
-                                    <div className="flex flex-row topRow justify-center items-center">
-                                        <div className="flex justify-center items-center gap-4">
-                                            <div className="z-50 w-10 h-10 rounded-full bg-blue-900">
-                                                <Image
-                                                    src={avatar}
-                                                    height
-                                                    width
-                                                />
-                                            </div>
-                                            <div>
-                                                <p className="text-gray-800 font-bold text-[15px]">Lorem ipsum</p>
-                                            </div>
-                                            <div className="py-1 px-3 bg-blue-800 rounded-2xl">
-                                                <p className="text-[13px]">Sector 2</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex justify-center items-center">
-                                            <div>
-                                                <p className="text-[14px] text-blue-700 font-semibold">2 min ago</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="flex justify-center items-center max-w-[85%] mx-auto mb-4">
-                                        <div>
-                                            <p className="text-[18px] text-gray-600 font-medium">Lorem Ipsum is simply
-                                                dummy text of the printing and typesetting industry.Lorem Ipsum is</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row justify-between space-x-4 max-w-[80%] mx-auto">
-                                        <div className="flex space-x-2 items-center">
-                                            <div className="w-6 h-6">
-                                                <Image src={like}/>
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold text-[12px] text-black">2k</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex space-x-2 items-center">
-                                            <div className="w-6 h-6">
-                                                <Image src={view}/>
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold text-[12px] text-black">2k</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex space-x-2 items-center">
-                                            <div className="w-6 h-6">
-                                                <Image src={comment}/>
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold text-[12px] text-black">2k Comments</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex space-x-2 items-center">
-                                            <div className="w-6 h-6">
-                                                <Image src={share}/>
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold text-[12px] text-black">Share</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
-                                <div>
-                                    <div className="flex flex-row topRow justify-center items-center">
-                                        <div className="flex justify-center items-center gap-4">
-                                            <div className="z-50 w-14 h-14 rounded-full bg-blue-900">
-                                                <Image
-                                                    src={avatar}
-                                                    height
-                                                    width
-                                                />
-                                            </div>
-                                            <div>
-                                                <p className="text-gray-800 font-bold text-[15px]">Lorem ipsum</p>
-                                            </div>
-                                            <div className="py-1 px-3 bg-blue-800 rounded-2xl">
-                                                <p className="text-[13px]">Sector 2</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex justify-center items-center">
-                                            <div>
-                                                <p className="text-[14px] text-blue-700 font-semibold">2 min ago</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="flex justify-center items-center max-w-[85%] mx-auto mb-4">
-                                        <div>
-                                            <p className="text-[18px] text-gray-600 font-medium">Lorem Ipsum is simply
-                                                dummy text of the printing and typesetting industry.Lorem Ipsum is</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row justify-between space-x-4 max-w-[80%] mx-auto">
-                                        <div className="flex space-x-2 items-center">
-                                            <div className="w-6 h-6">
-                                                <Image src={like}/>
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold text-[12px] text-black">2k</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex space-x-2 items-center">
-                                            <div className="w-6 h-6">
-                                                <Image src={view}/>
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold text-[12px] text-black">2k</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex space-x-2 items-center">
-                                            <div className="w-6 h-6">
-                                                <Image src={comment}/>
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold text-[12px] text-black">2k Comments</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex space-x-2 items-center">
-                                            <div className="w-6 h-6">
-                                                <Image src={share}/>
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold text-[12px] text-black">Share</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
-                                <div>
-                                    <div className="flex flex-row topRow justify-center items-center">
-                                        <div className="flex justify-center items-center gap-4">
-                                            <div className="z-50 w-14 h-14 rounded-full bg-blue-900">
-                                                <Image
-                                                    src={avatar}
-                                                    height
-                                                    width
-                                                />
-                                            </div>
-                                            <div>
-                                                <p className="text-gray-800 font-bold text-[15px]">Lorem ipsum</p>
-                                            </div>
-                                            <div className="py-1 px-3 bg-blue-800 rounded-2xl">
-                                                <p className="text-[13px]">Sector 2</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex justify-center items-center">
-                                            <div>
-                                                <p className="text-[14px] text-blue-700 font-semibold">2 min ago</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="flex justify-center items-center max-w-[85%] mx-auto mb-4">
-                                        <div>
-                                            <p className="text-[18px] text-gray-600 font-medium">Lorem Ipsum is simply
-                                                dummy text of the printing and typesetting industry.Lorem Ipsum is</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row justify-between space-x-4 max-w-[80%] mx-auto">
-                                        <div className="flex space-x-2 items-center">
-                                            <div className="w-6 h-6">
-                                                <Image src={like}/>
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold text-[12px] text-black">2k</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex space-x-2 items-center">
-                                            <div className="w-6 h-6">
-                                                <Image src={view}/>
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold text-[12px] text-black">2k</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex space-x-2 items-center">
-                                            <div className="w-6 h-6">
-                                                <Image src={comment}/>
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold text-[12px] text-black">2k Comments</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex space-x-2 items-center">
-                                            <div className="w-6 h-6">
-                                                <Image src={share}/>
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold text-[12px] text-black">Share</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
-                                <div>
-                                    <div className="flex flex-row topRow justify-center items-center">
-                                        <div className="flex justify-center items-center gap-4">
-                                            <div className="z-50 w-14 h-14 rounded-full bg-blue-900">
-                                                <Image
-                                                    src={avatar}
-                                                    height
-                                                    width
-                                                />
-                                            </div>
-                                            <div>
-                                                <p className="text-gray-800 font-bold text-[15px]">Lorem ipsum</p>
-                                            </div>
-                                            <div className="py-1 px-3 bg-blue-800 rounded-2xl">
-                                                <p className="text-[13px]">Sector 2</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex justify-center items-center">
-                                            <div>
-                                                <p className="text-[14px] text-blue-700 font-semibold">2 min ago</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="flex justify-center items-center max-w-[85%] mx-auto mb-4">
-                                        <div>
-                                            <p className="text-[18px] text-gray-600 font-medium">Lorem Ipsum is simply
-                                                dummy text of the printing and typesetting industry.Lorem Ipsum is</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-row justify-between space-x-4 max-w-[80%] mx-auto">
-                                        <div className="flex space-x-2 items-center">
-                                            <div className="w-6 h-6">
-                                                <Image src={like}/>
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold text-[12px] text-black">2k</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex space-x-2 items-center">
-                                            <div className="w-6 h-6">
-                                                <Image src={view}/>
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold text-[12px] text-black">2k</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex space-x-2 items-center">
-                                            <div className="w-6 h-6">
-                                                <Image src={comment}/>
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold text-[12px] text-black">2k Comments</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex space-x-2 items-center">
-                                            <div className="w-6 h-6">
-                                                <Image src={share}/>
-                                            </div>
-                                            <div>
-                                                <p className="font-semibold text-[12px] text-black">Share</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="h-screen w-[25%] pt-6">
-                        <h1 className={action==="Market Stories" ? "submit gray": "submit"} onClick={() => {setAction("Market Stories")}}>Market
-                            Stories</h1>
-                        <div className="pt-4">
-                            <div className="h-56 bg-white w-[90%] mx-auto mb-4 z-10 flex flex-col boxShadow">
-                                <div className="bg-blue-900 image-part">
-                                    <Image
-                                        src={sunset}
-                                        className="image"
-                                    />
-                                </div>
-                                <div className="min-h-[40%] max-w-[90%] mx-auto pt-1">
-                                    <p className="font-bold text-[13px] text-black">The Coldest Sunset</p>
-                                    <p className=" text-[12px] text-black">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Aliquam aut explicabo facilis fugiat molestiae.</p>
-                                </div>
-                            </div>
-                            <div className="h-56 bg-white w-[90%] mx-auto mb-4 z-10 flex flex-col boxShadow">
-                                <div className="bg-blue-900 image-part">
-                                    <Image
-                                        src={sunset}
-                                        className="image"
-                                    />
-                                </div>
-                                <div className="min-h-[40%] max-w-[90%] mx-auto pt-1">
-                                    <p className="font-bold text-[13px] text-black">The Coldest Sunset</p>
-                                    <p className=" text-[12px] text-black">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Aliquam aut explicabo facilis fugiat molestiae.</p>
-                                </div>
-                            </div>
-                            <div className="h-56 bg-white w-[90%] mx-auto mb-4 z-10 flex flex-col boxShadow">
-                                <div className="bg-blue-900 image-part">
-                                    <Image
-                                        src={sunset}
-                                        className="image"
-                                    />
-                                </div>
-                                <div className="min-h-[40%] max-w-[90%] mx-auto pt-1">
-                                    <p className="font-bold text-[13px] text-black">The Coldest Sunset</p>
-                                    <p className=" text-[12px] text-black">Lorem ipsum dolor sit amet, consectetur
-                                        adipisicing elit. Aliquam aut explicabo facilis fugiat molestiae.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>*/}
 
             <div className="h-full pt-6 md:flex md:flex-row">
-                <div className="h-full md:flex md:flex-col md:w-[70%]">
+                <div className="h-full inline-block md:flex md:flex-col md:w-[70%]">
                     <h1 className={action === "Market Stories" ? "submit gray" : "submit"} onClick={() => {
-                        setAction("Market Stories")
-                    }}>Market
-                        Stories</h1>
-                    <div className="pt-4 desktop-view">
-                        <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
-                            <div>
-                                <div className="flex flex-row topRow justify-center items-center">
-                                    <div className="flex justify-center items-center gap-4">
-                                        <div className="z-50 w-14 h-14 rounded-full bg-blue-900">
-                                            <Image
-                                                src={avatar}
-                                                alt="Share"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="text-gray-800 font-bold text-[15px]">Lorem ipsum</p>
-                                        </div>
-                                        <div className="py-1 px-3 bg-blue-800 rounded-2xl">
-                                            <p className="text-[13px]">Sector 2</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex justify-center items-center">
-                                        <div>
-                                            <p className="text-[14px] text-blue-700 font-semibold">2 min ago</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="flex justify-center items-center max-w-[85%] mx-auto mb-4">
-                                    <div>
-                                        <p className="text-[18px] text-gray-600 font-medium">Lorem Ipsum is simply
-                                            dummy text of the printing and typesetting industry.Lorem Ipsum is</p>
-                                    </div>
-                                </div>
-                                <div className="flex flex-row justify-between space-x-4 max-w-[80%] mx-auto">
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={like}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={view}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={comment}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k Comments</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={share}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">Share</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
-                            <div>
-                                <div className="flex flex-row topRow justify-center items-center">
-                                    <div className="flex justify-center items-center gap-4">
-                                        <div className="z-50 w-14 h-14 rounded-full bg-blue-900">
-                                            <Image
-                                                src={avatar}
-                                                alt="Share"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="text-gray-800 font-bold text-[15px]">Lorem ipsum</p>
-                                        </div>
-                                        <div className="py-1 px-3 bg-blue-800 rounded-2xl">
-                                            <p className="text-[13px]">Sector 2</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex justify-center items-center">
-                                        <div>
-                                            <p className="text-[14px] text-blue-700 font-semibold">2 min ago</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="flex justify-center items-center max-w-[85%] mx-auto mb-4">
-                                    <div>
-                                        <p className="text-[18px] text-gray-600 font-medium">Lorem Ipsum is simply
-                                            dummy text of the printing and typesetting industry.Lorem Ipsum is</p>
-                                    </div>
-                                </div>
-                                <div className="flex flex-row justify-between space-x-4 max-w-[80%] mx-auto">
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={like}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={view}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={comment}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k Comments</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={share}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">Share</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
-                            <div>
-                                <div className="flex flex-row topRow justify-center items-center">
-                                    <div className="flex justify-center items-center gap-4">
-                                        <div className="z-50 w-14 h-14 rounded-full bg-blue-900">
-                                            <Image
-                                                src={avatar}
-                                                alt="Share"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="text-gray-800 font-bold text-[15px]">Lorem ipsum</p>
-                                        </div>
-                                        <div className="py-1 px-3 bg-blue-800 rounded-2xl">
-                                            <p className="text-[13px]">Sector 2</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex justify-center items-center">
-                                        <div>
-                                            <p className="text-[14px] text-blue-700 font-semibold">2 min ago</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="flex justify-center items-center max-w-[85%] mx-auto mb-4">
-                                    <div>
-                                        <p className="text-[18px] text-gray-600 font-medium">Lorem Ipsum is simply
-                                            dummy text of the printing and typesetting industry.Lorem Ipsum is</p>
-                                    </div>
-                                </div>
-                                <div className="flex flex-row justify-between space-x-4 max-w-[80%] mx-auto">
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={like}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={view}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={comment}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k Comments</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={share}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">Share</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
-                            <div>
-                                <div className="flex flex-row topRow justify-center items-center">
-                                    <div className="flex justify-center items-center gap-4">
-                                        <div className="z-50 w-14 h-14 rounded-full bg-blue-900">
-                                            <Image
-                                                src={avatar}
-                                                alt="Share"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="text-gray-800 font-bold text-[15px]">Lorem ipsum</p>
-                                        </div>
-                                        <div className="py-1 px-3 bg-blue-800 rounded-2xl">
-                                            <p className="text-[13px]">Sector 2</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex justify-center items-center">
-                                        <div>
-                                            <p className="text-[14px] text-blue-700 font-semibold">2 min ago</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="flex justify-center items-center max-w-[85%] mx-auto mb-4">
-                                    <div>
-                                        <p className="text-[18px] text-gray-600 font-medium">Lorem Ipsum is simply
-                                            dummy text of the printing and typesetting industry.Lorem Ipsum is</p>
-                                    </div>
-                                </div>
-                                <div className="flex flex-row justify-between space-x-4 max-w-[80%] mx-auto">
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={like}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={view}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={comment}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k Comments</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={share}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">Share</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className=" h-full md:flex md:flex-col md:w-[25%]">
-                    <h1 className={action === "Discussion Forum" ? "submit gray" : "submit"} onClick={() => {
                         setAction("Discussion Forum")
-                    }}>Discussion
-                        Forum</h1>
+                    }}>Discussion Forum</h1>
+                    <div className="pt-4 desktop-view">
+                        <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
+                            <div>
+                                <div className="flex flex-row topRow justify-center items-center">
+                                    <div className="flex justify-center items-center gap-4">
+                                        <div className="z-50 w-14 h-14 rounded-full bg-blue-900">
+                                            <Image
+                                                src={avatar}
+                                                alt="Share"
+                                                height
+                                                width
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="text-gray-800 font-bold text-[15px]">Lorem ipsum</p>
+                                        </div>
+                                        <div className="py-1 px-3 bg-blue-800 rounded-2xl">
+                                            <p className="text-[13px]">Sector 2</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex justify-center items-center">
+                                        <div>
+                                            <p className="text-[14px] text-blue-700 font-semibold">2 min ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="flex justify-center items-center max-w-[85%] mx-auto mb-4">
+                                    <div>
+                                        <p className="text-[18px] text-gray-600 font-medium">Lorem Ipsum is simply
+                                            dummy text of the printing and typesetting industry.Lorem Ipsum is</p>
+                                    </div>
+                                </div>
+                                <div className="flex flex-row justify-between space-x-4 max-w-[80%] mx-auto">
+                                    <div className="flex space-x-2 items-center">
+                                        <div className="w-6 h-6">
+                                            <Image
+                                                src={like}
+                                                alt="like"
+                                                height
+                                                width
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-[12px] text-black">2k</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex space-x-2 items-center">
+                                        <div className="w-6 h-6">
+                                            <Image
+                                                src={view}
+                                                alt="like"
+                                                height
+                                                width
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-[12px] text-black">2k</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex space-x-2 items-center">
+                                        <div className="w-6 h-6">
+                                            <Image
+                                                src={comment}
+                                                alt="like"
+                                                height
+                                                width
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-[12px] text-black">2k Comments</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex space-x-2 items-center">
+                                        <div className="w-6 h-6">
+                                            <Image
+                                                src={share}
+                                                alt="like"
+                                                height
+                                                width
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-[12px] text-black">Share</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
+                            <div>
+                                <div className="flex flex-row topRow justify-center items-center">
+                                    <div className="flex justify-center items-center gap-4">
+                                        <div className="z-50 w-14 h-14 rounded-full bg-blue-900">
+                                            <Image
+                                                src={avatar}
+                                                alt="Share"
+                                                height
+                                                width
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="text-gray-800 font-bold text-[15px]">Lorem ipsum</p>
+                                        </div>
+                                        <div className="py-1 px-3 bg-blue-800 rounded-2xl">
+                                            <p className="text-[13px]">Sector 2</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex justify-center items-center">
+                                        <div>
+                                            <p className="text-[14px] text-blue-700 font-semibold">2 min ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="flex justify-center items-center max-w-[85%] mx-auto mb-4">
+                                    <div>
+                                        <p className="text-[18px] text-gray-600 font-medium">Lorem Ipsum is simply
+                                            dummy text of the printing and typesetting industry.Lorem Ipsum is</p>
+                                    </div>
+                                </div>
+                                <div className="flex flex-row justify-between space-x-4 max-w-[80%] mx-auto">
+                                    <div className="flex space-x-2 items-center">
+                                        <div className="w-6 h-6">
+                                            <Image
+                                                src={like}
+                                                alt="like"
+                                                height
+                                                width
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-[12px] text-black">2k</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex space-x-2 items-center">
+                                        <div className="w-6 h-6">
+                                            <Image
+                                                src={view}
+                                                alt="like"
+                                                height
+                                                width
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-[12px] text-black">2k</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex space-x-2 items-center">
+                                        <div className="w-6 h-6">
+                                            <Image
+                                                src={comment}
+                                                alt="like"
+                                                height
+                                                width
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-[12px] text-black">2k Comments</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex space-x-2 items-center">
+                                        <div className="w-6 h-6">
+                                            <Image
+                                                src={share}
+                                                alt="like"
+                                                height
+                                                width
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-[12px] text-black">Share</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
+                            <div>
+                                <div className="flex flex-row topRow justify-center items-center">
+                                    <div className="flex justify-center items-center gap-4">
+                                        <div className="z-50 w-14 h-14 rounded-full bg-blue-900">
+                                            <Image
+                                                src={avatar}
+                                                alt="Share"
+                                                height
+                                                width
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="text-gray-800 font-bold text-[15px]">Lorem ipsum</p>
+                                        </div>
+                                        <div className="py-1 px-3 bg-blue-800 rounded-2xl">
+                                            <p className="text-[13px]">Sector 2</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex justify-center items-center">
+                                        <div>
+                                            <p className="text-[14px] text-blue-700 font-semibold">2 min ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="flex justify-center items-center max-w-[85%] mx-auto mb-4">
+                                    <div>
+                                        <p className="text-[18px] text-gray-600 font-medium">Lorem Ipsum is simply
+                                            dummy text of the printing and typesetting industry.Lorem Ipsum is</p>
+                                    </div>
+                                </div>
+                                <div className="flex flex-row justify-between space-x-4 max-w-[80%] mx-auto">
+                                    <div className="flex space-x-2 items-center">
+                                        <div className="w-6 h-6">
+                                            <Image
+                                                src={like}
+                                                alt="like"
+                                                height
+                                                width
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-[12px] text-black">2k</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex space-x-2 items-center">
+                                        <div className="w-6 h-6">
+                                            <Image
+                                                src={view}
+                                                alt="like"
+                                                height
+                                                width
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-[12px] text-black">2k</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex space-x-2 items-center">
+                                        <div className="w-6 h-6">
+                                            <Image
+                                                src={comment}
+                                                alt="like"
+                                                height
+                                                width
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-[12px] text-black">2k Comments</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex space-x-2 items-center">
+                                        <div className="w-6 h-6">
+                                            <Image
+                                                src={share}
+                                                alt="like"
+                                                height
+                                                width
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-[12px] text-black">Share</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
+                            <div>
+                                <div className="flex flex-row topRow justify-center items-center">
+                                    <div className="flex justify-center items-center gap-4">
+                                        <div className="z-50 w-14 h-14 rounded-full bg-blue-900">
+                                            <Image
+                                                src={avatar}
+                                                alt="Share"
+                                                height
+                                                width
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="text-gray-800 font-bold text-[15px]">Lorem ipsum</p>
+                                        </div>
+                                        <div className="py-1 px-3 bg-blue-800 rounded-2xl">
+                                            <p className="text-[13px]">Sector 2</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex justify-center items-center">
+                                        <div>
+                                            <p className="text-[14px] text-blue-700 font-semibold">2 min ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="flex justify-center items-center max-w-[85%] mx-auto mb-4">
+                                    <div>
+                                        <p className="text-[18px] text-gray-600 font-medium">Lorem Ipsum is simply
+                                            dummy text of the printing and typesetting industry.Lorem Ipsum is</p>
+                                    </div>
+                                </div>
+                                <div className="flex flex-row justify-between space-x-4 max-w-[80%] mx-auto">
+                                    <div className="flex space-x-2 items-center">
+                                        <div className="w-6 h-6">
+                                            <Image
+                                                src={like}
+                                                alt="like"
+                                                height
+                                                width
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-[12px] text-black">2k</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex space-x-2 items-center">
+                                        <div className="w-6 h-6">
+                                            <Image
+                                                src={view}
+                                                alt="like"
+                                                height
+                                                width
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-[12px] text-black">2k</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex space-x-2 items-center">
+                                        <div className="w-6 h-6">
+                                            <Image
+                                                src={comment}
+                                                alt="like"
+                                                height
+                                                width
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-[12px] text-black">2k Comments</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex space-x-2 items-center">
+                                        <div className="w-6 h-6">
+                                            <Image
+                                                src={share}
+                                                alt="like"
+                                                height
+                                                width
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold text-[12px] text-black">Share</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className=" h-full inline-block md:flex md:flex-col md:w-[25%]">
+                    <h1 className={action === "Discussion Forum" ? "submit gray" : "submit"} onClick={() => {
+                        setAction("Market Stories")
+                    }}>Market Stories</h1>
                     <div className="pt-4 desktop-view">
                         <div className="h-56 bg-white w-[90%] mx-auto mb-4 z-10 flex flex-col boxShadow">
                             <div className="bg-blue-900 image-part">
@@ -939,361 +619,361 @@ const Sidebar = () => {
                         </div>
                     </div>
                 </div>
-                <div className="pt-4 mobile-view sm:min-w-[90%] h-full">
+                <div className="pt-4 mobile-view sm:min-w-[90%] sm:mx-auto h-full">
                     {action === "Discussion Forum" &&
-                        <div className="pt-4 h-[100vh]">
-                        <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
-                            <div>
-                                <div className="flex flex-row topRow justify-center items-center">
-                                    <div className="flex justify-center items-center gap-4">
-                                        <div className="z-50 w-14 h-14 rounded-full bg-blue-900">
-                                            <Image
-                                                src={avatar}
-                                                alt="Share"
-                                                height
-                                                width
-                                            />
+                        <div className="pt-4 min-h-[100vh]">
+                            <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
+                                <div>
+                                    <div className="flex flex-row topRow justify-center items-center">
+                                        <div className="flex justify-center items-center gap-4">
+                                            <div className="z-10 w-10 h-10 rounded-full bg-blue-900">
+                                                <Image
+                                                    src={avatar}
+                                                    alt="Share"
+                                                    height
+                                                    width
+                                                />
+                                            </div>
+                                            <div>
+                                                <p className="text-gray-800 font-bold text-[12px]">Lorem ipsum</p>
+                                            </div>
+                                            <div className="py-1 px-3 bg-blue-800 rounded-2xl">
+                                                <p className="text-[10px]">Sector 2</p>
+                                            </div>
                                         </div>
+                                        <div className="flex justify-center items-center">
+                                            <div>
+                                                <p className="text-[11px] text-blue-700 font-semibold">2 min ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="flex justify-center items-center max-w-[85%] mx-auto mb-4">
                                         <div>
-                                            <p className="text-gray-800 font-bold text-[15px]">Lorem ipsum</p>
-                                        </div>
-                                        <div className="py-1 px-3 bg-blue-800 rounded-2xl">
-                                            <p className="text-[13px]">Sector 2</p>
+                                            <p className="text-[14px] text-gray-600 font-medium">Lorem Ipsum is simply
+                                                dummy text of the printing and typesetting industry.Lorem Ipsum is</p>
                                         </div>
                                     </div>
-                                    <div className="flex justify-center items-center">
-                                        <div>
-                                            <p className="text-[14px] text-blue-700 font-semibold">2 min ago</p>
+                                    <div className="flex flex-row justify-between space-x-4 max-w-[90%] mx-auto">
+                                        <div className="flex space-x-1 items-center">
+                                            <div className="w-4 h-4">
+                                                <Image
+                                                    src={like}
+                                                    alt="like"
+                                                    height
+                                                    width
+                                                />
+                                            </div>
+                                            <div>
+                                                <p className="font-semibold text-[10px] text-black">2k</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div className="flex justify-center items-center max-w-[85%] mx-auto mb-4">
-                                    <div>
-                                        <p className="text-[18px] text-gray-600 font-medium">Lorem Ipsum is simply
-                                            dummy text of the printing and typesetting industry.Lorem Ipsum is</p>
-                                    </div>
-                                </div>
-                                <div className="flex flex-row justify-between space-x-4 max-w-[80%] mx-auto">
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={like}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
+                                        <div className="flex space-x-1 items-center">
+                                            <div className="w-4 h-4">
+                                                <Image
+                                                    src={view}
+                                                    alt="like"
+                                                    height
+                                                    width
+                                                />
+                                            </div>
+                                            <div>
+                                                <p className="font-semibold text-[10px] text-black">2k</p>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k</p>
+                                        <div className="flex space-x-1 items-center">
+                                            <div className="w-4 h-4">
+                                                <Image
+                                                    src={comment}
+                                                    alt="like"
+                                                    height
+                                                    width
+                                                />
+                                            </div>
+                                            <div>
+                                                <p className="font-semibold text-[10px] text-black">2k Comments</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={view}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={comment}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k Comments</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={share}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">Share</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
-                            <div>
-                                <div className="flex flex-row topRow justify-center items-center">
-                                    <div className="flex justify-center items-center gap-4">
-                                        <div className="z-50 w-14 h-14 rounded-full bg-blue-900">
-                                            <Image
-                                                src={avatar}
-                                                alt="Share"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="text-gray-800 font-bold text-[15px]">Lorem ipsum</p>
-                                        </div>
-                                        <div className="py-1 px-3 bg-blue-800 rounded-2xl">
-                                            <p className="text-[13px]">Sector 2</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex justify-center items-center">
-                                        <div>
-                                            <p className="text-[14px] text-blue-700 font-semibold">2 min ago</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="flex justify-center items-center max-w-[85%] mx-auto mb-4">
-                                    <div>
-                                        <p className="text-[18px] text-gray-600 font-medium">Lorem Ipsum is simply
-                                            dummy text of the printing and typesetting industry.Lorem Ipsum is</p>
-                                    </div>
-                                </div>
-                                <div className="flex flex-row justify-between space-x-4 max-w-[80%] mx-auto">
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={like}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={view}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={comment}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k Comments</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={share}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">Share</p>
+                                        <div className="flex space-x-1 items-center">
+                                            <div className="w-6 h-6">
+                                                <Image
+                                                    src={share}
+                                                    alt="like"
+                                                    height
+                                                    width
+                                                />
+                                            </div>
+                                            <div>
+                                                <p className="font-semibold text-[10px] text-black">Share</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
-                            <div>
-                                <div className="flex flex-row topRow justify-center items-center">
-                                    <div className="flex justify-center items-center gap-4">
-                                        <div className="z-50 w-14 h-14 rounded-full bg-blue-900">
-                                            <Image
-                                                src={avatar}
-                                                alt="Share"
-                                                height
-                                                width
-                                            />
+                            <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
+                                <div>
+                                    <div className="flex flex-row topRow justify-center items-center">
+                                        <div className="flex justify-center items-center gap-4">
+                                            <div className="z-10 w-10 h-10 rounded-full bg-blue-900">
+                                                <Image
+                                                    src={avatar}
+                                                    alt="Share"
+                                                    height
+                                                    width
+                                                />
+                                            </div>
+                                            <div>
+                                                <p className="text-gray-800 font-bold text-[12px]">Lorem ipsum</p>
+                                            </div>
+                                            <div className="py-1 px-3 bg-blue-800 rounded-2xl">
+                                                <p className="text-[10px]">Sector 2</p>
+                                            </div>
                                         </div>
+                                        <div className="flex justify-center items-center">
+                                            <div>
+                                                <p className="text-[11px] text-blue-700 font-semibold">2 min ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="flex justify-center items-center max-w-[85%] mx-auto mb-4">
                                         <div>
-                                            <p className="text-gray-800 font-bold text-[15px]">Lorem ipsum</p>
-                                        </div>
-                                        <div className="py-1 px-3 bg-blue-800 rounded-2xl">
-                                            <p className="text-[13px]">Sector 2</p>
+                                            <p className="text-[14px] text-gray-600 font-medium">Lorem Ipsum is simply
+                                                dummy text of the printing and typesetting industry.Lorem Ipsum is</p>
                                         </div>
                                     </div>
-                                    <div className="flex justify-center items-center">
-                                        <div>
-                                            <p className="text-[14px] text-blue-700 font-semibold">2 min ago</p>
+                                    <div className="flex flex-row justify-between space-x-4 max-w-[90%] mx-auto">
+                                        <div className="flex space-x-1 items-center">
+                                            <div className="w-4 h-4">
+                                                <Image
+                                                    src={like}
+                                                    alt="like"
+                                                    height
+                                                    width
+                                                />
+                                            </div>
+                                            <div>
+                                                <p className="font-semibold text-[10px] text-black">2k</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div className="flex justify-center items-center max-w-[85%] mx-auto mb-4">
-                                    <div>
-                                        <p className="text-[18px] text-gray-600 font-medium">Lorem Ipsum is simply
-                                            dummy text of the printing and typesetting industry.Lorem Ipsum is</p>
-                                    </div>
-                                </div>
-                                <div className="flex flex-row justify-between space-x-4 max-w-[80%] mx-auto">
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={like}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
+                                        <div className="flex space-x-1 items-center">
+                                            <div className="w-4 h-4">
+                                                <Image
+                                                    src={view}
+                                                    alt="like"
+                                                    height
+                                                    width
+                                                />
+                                            </div>
+                                            <div>
+                                                <p className="font-semibold text-[10px] text-black">2k</p>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k</p>
+                                        <div className="flex space-x-1 items-center">
+                                            <div className="w-4 h-4">
+                                                <Image
+                                                    src={comment}
+                                                    alt="like"
+                                                    height
+                                                    width
+                                                />
+                                            </div>
+                                            <div>
+                                                <p className="font-semibold text-[10px] text-black">2k Comments</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={view}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={comment}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k Comments</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={share}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">Share</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
-                            <div>
-                                <div className="flex flex-row topRow justify-center items-center">
-                                    <div className="flex justify-center items-center gap-4">
-                                        <div className="z-50 w-14 h-14 rounded-full bg-blue-900">
-                                            <Image
-                                                src={avatar}
-                                                alt="Share"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="text-gray-800 font-bold text-[15px]">Lorem ipsum</p>
-                                        </div>
-                                        <div className="py-1 px-3 bg-blue-800 rounded-2xl">
-                                            <p className="text-[13px]">Sector 2</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex justify-center items-center">
-                                        <div>
-                                            <p className="text-[14px] text-blue-700 font-semibold">2 min ago</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="flex justify-center items-center max-w-[85%] mx-auto mb-4">
-                                    <div>
-                                        <p className="text-[18px] text-gray-600 font-medium">Lorem Ipsum is simply
-                                            dummy text of the printing and typesetting industry.Lorem Ipsum is</p>
-                                    </div>
-                                </div>
-                                <div className="flex flex-row justify-between space-x-4 max-w-[80%] mx-auto">
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={like}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={view}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={comment}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">2k Comments</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex space-x-2 items-center">
-                                        <div className="w-6 h-6">
-                                            <Image
-                                                src={share}
-                                                alt="like"
-                                                height
-                                                width
-                                            />
-                                        </div>
-                                        <div>
-                                            <p className="font-semibold text-[12px] text-black">Share</p>
+                                        <div className="flex space-x-1 items-center">
+                                            <div className="w-6 h-6">
+                                                <Image
+                                                    src={share}
+                                                    alt="like"
+                                                    height
+                                                    width
+                                                />
+                                            </div>
+                                            <div>
+                                                <p className="font-semibold text-[10px] text-black">Share</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
+                                <div>
+                                    <div className="flex flex-row topRow justify-center items-center">
+                                        <div className="flex justify-center items-center gap-4">
+                                            <div className="z-10 w-10 h-10 rounded-full bg-blue-900">
+                                                <Image
+                                                    src={avatar}
+                                                    alt="Share"
+                                                    height
+                                                    width
+                                                />
+                                            </div>
+                                            <div>
+                                                <p className="text-gray-800 font-bold text-[12px]">Lorem ipsum</p>
+                                            </div>
+                                            <div className="py-1 px-3 bg-blue-800 rounded-2xl">
+                                                <p className="text-[10px]">Sector 2</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex justify-center items-center">
+                                            <div>
+                                                <p className="text-[11px] text-blue-700 font-semibold">2 min ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="flex justify-center items-center max-w-[85%] mx-auto mb-4">
+                                        <div>
+                                            <p className="text-[14px] text-gray-600 font-medium">Lorem Ipsum is simply
+                                                dummy text of the printing and typesetting industry.Lorem Ipsum is</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row justify-between space-x-4 max-w-[90%] mx-auto">
+                                        <div className="flex space-x-1 items-center">
+                                            <div className="w-4 h-4">
+                                                <Image
+                                                    src={like}
+                                                    alt="like"
+                                                    height
+                                                    width
+                                                />
+                                            </div>
+                                            <div>
+                                                <p className="font-semibold text-[10px] text-black">2k</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex space-x-1 items-center">
+                                            <div className="w-4 h-4">
+                                                <Image
+                                                    src={view}
+                                                    alt="like"
+                                                    height
+                                                    width
+                                                />
+                                            </div>
+                                            <div>
+                                                <p className="font-semibold text-[10px] text-black">2k</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex space-x-1 items-center">
+                                            <div className="w-4 h-4">
+                                                <Image
+                                                    src={comment}
+                                                    alt="like"
+                                                    height
+                                                    width
+                                                />
+                                            </div>
+                                            <div>
+                                                <p className="font-semibold text-[10px] text-black">2k Comments</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex space-x-1 items-center">
+                                            <div className="w-6 h-6">
+                                                <Image
+                                                    src={share}
+                                                    alt="like"
+                                                    height
+                                                    width
+                                                />
+                                            </div>
+                                            <div>
+                                                <p className="font-semibold text-[10px] text-black">Share</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
+                                <div>
+                                    <div className="flex flex-row topRow justify-center items-center">
+                                        <div className="flex justify-center items-center gap-4">
+                                            <div className="z-10 w-10 h-10 rounded-full bg-blue-900">
+                                                <Image
+                                                    src={avatar}
+                                                    alt="Share"
+                                                    height
+                                                    width
+                                                />
+                                            </div>
+                                            <div>
+                                                <p className="text-gray-800 font-bold text-[12px]">Lorem ipsum</p>
+                                            </div>
+                                            <div className="py-1 px-3 bg-blue-800 rounded-2xl">
+                                                <p className="text-[10px]">Sector 2</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex justify-center items-center">
+                                            <div>
+                                                <p className="text-[11px] text-blue-700 font-semibold">2 min ago</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="flex justify-center items-center max-w-[85%] mx-auto mb-4">
+                                        <div>
+                                            <p className="text-[14px] text-gray-600 font-medium">Lorem Ipsum is simply
+                                                dummy text of the printing and typesetting industry.Lorem Ipsum is</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row justify-between space-x-4 max-w-[90%] mx-auto">
+                                        <div className="flex space-x-1 items-center">
+                                            <div className="w-4 h-4">
+                                                <Image
+                                                    src={like}
+                                                    alt="like"
+                                                    height
+                                                    width
+                                                />
+                                            </div>
+                                            <div>
+                                                <p className="font-semibold text-[10px] text-black">2k</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex space-x-1 items-center">
+                                            <div className="w-4 h-4">
+                                                <Image
+                                                    src={view}
+                                                    alt="like"
+                                                    height
+                                                    width
+                                                />
+                                            </div>
+                                            <div>
+                                                <p className="font-semibold text-[10px] text-black">2k</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex space-x-1 items-center">
+                                            <div className="w-4 h-4">
+                                                <Image
+                                                    src={comment}
+                                                    alt="like"
+                                                    height
+                                                    width
+                                                />
+                                            </div>
+                                            <div>
+                                                <p className="font-semibold text-[10px] text-black">2k Comments</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex space-x-1 items-center">
+                                            <div className="w-6 h-6">
+                                                <Image
+                                                    src={share}
+                                                    alt="like"
+                                                    height
+                                                    width
+                                                />
+                                            </div>
+                                            <div>
+                                                <p className="font-semibold text-[10px] text-black">Share</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     }
                     {action === "Market Stories" &&
-                        <div className="pt-4 h-[100vh]">
+                        <div className="pt-4 min-h-[100vh]">
                             <div className="h-56 bg-white w-[90%] mx-auto mb-4 z-10 flex flex-col boxShadow">
                                 <div className="bg-blue-900 image-part">
                                     <Image
