@@ -29,8 +29,6 @@
 
 .space {
     padding: 10px;
-    /*display: flex;*/
-    /*justify-content: flex-end;*/
 }
 
 .spacy {
@@ -56,6 +54,28 @@
 @media (max-width: 767px) {
     .desktop-view {
         display: none;
+    }
+
+    .submit {
+        font-weight: 600;
+        color: rgb(255, 255, 255);
+        background: #1e375f;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .gray {
+        color: rgb(255, 255, 255);
+        background: #1e375f;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
     }
 }
 

@@ -1,123 +1,3 @@
-/*
-"use client";
-
-import {useState} from "react";
-import Image from "next/image";
-import {control, discussion, market, user,} from "@/public/assets";
-
-const Sidebar = () => {
-    const [open, setOpen] = useState(true);
-    const Menus = [
-        {title: "Discussion Forum", src: discussion},
-        {title: "Market Stories", src: market},
-        {title: "Sentiment"},
-        {title: "Market"},
-        {title: "Sector"},
-        {title: "Watchlist"},
-        {title: "Events"},
-        {title: "News/Interview"},
-    ];
-
-    return (
-        <div className="flex">
-            <div
-                className={` ${
-                    open ? "w-72" : "w-0 "
-                } bg-blue-900 h-screen pt-8 relative duration-300`}
-            >
-                <div
-                    className="absolute cursor-pointer -right-4 top-[40%] w-6 h-24 bg-blue-900  justify-center flex items-center"
-                    onClick={() => setOpen(!open)}
-                >
-                    <Image
-                        src={control}
-                        className={`w-3 ${!open && "rotate-180"}`}
-
-                        alt=""
-                        width
-                        height
-                    />
-                </div>
-                <div className="flex gap-x-4 items-center pl-2">
-                    <Image
-                        src={user}
-                        className={`cursor-pointer duration-500 ${
-                            open && "rotate-[360deg]"
-                        }`}
-                        alt=""
-                        width
-                        height
-                    />
-                    <h1
-                        className={`text-white origin-left font-medium text-xl duration-200 ${
-                            !open && "scale-0"
-                        }`}
-                    >
-                        Hello User
-                    </h1>
-                </div>
-                <ul className="pt-6 pl-2">
-                    {Menus.map((Menu, index) => (
-                        <li
-                            key={index}
-                            className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4
-              ${Menu.gap ? "mt-9" : "mt-2"} ${
-                                index === 0 && "bg-light-white"
-                            } `}
-                        >
-                            {Menu.src ? (
-                                <Image src={Menu.src} alt="" width={20} height={20}/>
-                            ) : (
-                                <div style={{width: 20, height: 20}}/>
-                            )}
-                            <span className={`${!open && "hidden"} origin-left duration-200`}>
-                {Menu.title}
-              </span>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-            <div className="h-full flex-1">
-                <div className="flex">
-                    <div className="h-full w-[70%] pr-8 pt-6 pl-8">
-                        <h1 className="text-2xl font-semibold text-red-700 bg-gray-100 w-60 text-center">Discussion
-                            Forum</h1>
-                        <div className="pt-4">
-                            <div className="h-48 bg-red-200 w-[90%] mx-auto mb-4">
-                                <p>hello</p>
-                            </div>
-                            <div className="h-48 bg-red-200 w-[90%] mx-auto mb-4">
-                                <p>hello</p>
-                            </div>
-                            <div className="h-48 bg-red-200 w-[90%] mx-auto mb-4">
-                                <p>hello</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="h-screen w-[25%] pt-6">
-                        <h1 className="text-2xl font-semibold text-red-700 bg-gray-100 w-48 text-center">Market
-                            Stories</h1>
-                        <div className="pt-4">
-                            <div className="h-48 bg-red-200 w-[90%] mx-auto mb-4">
-                                <p>hello</p>
-                            </div>
-                            <div className="h-48 bg-red-200 w-[90%] mx-auto mb-4">
-                                <p>hello</p>
-                            </div>
-                            <div className="h-48 bg-red-200 w-[90%] mx-auto mb-4">
-                                <p>hello</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-};
-
-export default Sidebar;
-*/
-
 "use client";
 import {useState} from "react";
 import Image from "next/image";
@@ -167,9 +47,9 @@ const Sidebar = () => {
                     <div className="flex flex-row text-center justify-center items-center">
                         <Image
                             src={user}
-                            className={`cursor-pointer duration-500 ${
+                            /*className={`duration-500 z-50 ${
                                 open && "rotate-[360deg]"
-                            }`}
+                            }`}*/
                             alt="user-icon"
                             width={30}
                             height={30}
@@ -208,11 +88,9 @@ const Sidebar = () => {
                 </ul>
             </div>
 
-            <div className="h-full pt-6 md:flex md:flex-row">
-                <div className="h-full inline-block md:flex md:flex-col md:w-[70%]">
-                    <h1 className={action === "Market Stories" ? "submit gray" : "submit"} onClick={() => {
-                        setAction("Discussion Forum")
-                    }}>Discussion Forum</h1>
+            <div className="h-full md:pt-6 md:flex md:flex-row">
+                <div className="h-full inline-block md:flex md:flex-col md:w-[70%] desktop-view">
+                    <h1 className="submit desktop-view">Discussion Forum</h1>
                     <div className="pt-4 desktop-view">
                         <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
                             <div>
@@ -564,10 +442,8 @@ const Sidebar = () => {
                         </div>
                     </div>
                 </div>
-                <div className=" h-full inline-block md:flex md:flex-col md:w-[25%]">
-                    <h1 className={action === "Discussion Forum" ? "submit gray" : "submit"} onClick={() => {
-                        setAction("Market Stories")
-                    }}>Market Stories</h1>
+                <div className=" h-full inline-block md:flex md:flex-col md:w-[25%] desktop-view">
+                    <h1 className="submit desktop-view">Market Stories</h1>
                     <div className="pt-4 desktop-view">
                         <div className="h-56 bg-white w-[90%] mx-auto mb-4 z-10 flex flex-col boxShadow">
                             <div className="bg-blue-900 image-part">
@@ -619,7 +495,19 @@ const Sidebar = () => {
                         </div>
                     </div>
                 </div>
-                <div className="pt-4 mobile-view sm:min-w-[90%] sm:mx-auto h-full">
+                <div className="mobile-view min-w-[90%] mx-auto h-full">
+                    <div className="flex flex-row min-w-[100%]">
+                        <div className="min-w-[50%]">
+                            <h1 className={action === "Market Stories" ? "submit" : "submit "} onClick={() => {
+                                setAction("Discussion Forum")
+                            }}>Discussion Forum</h1>
+                        </div>
+                        <div className="min-w-[50%]">
+                            <h1 className={action === "Discussion Forum" ? "submit" : "submit "} onClick={() => {
+                                setAction("Market Stories")
+                            }}>Market Stories</h1>
+                        </div>
+                    </div>
                     {action === "Discussion Forum" &&
                         <div className="pt-4 min-h-[100vh]">
                             <div className="h-44 bg-white boxShadow w-[90%] mx-auto mb-4 z-10 px-3">
